@@ -1,0 +1,71 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Full-page typing section */
+.typing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #333;
+    color: #fff;
+}
+
+#typing-text {
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+/* Content styling */
+.content {
+    display: none;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    background-color: #333;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.main-content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.main-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 1.2em;
+}
