@@ -1,117 +1,150 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
-/* Typing Effect Section */
-.typing-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transition: opacity 0.5s ease-out;
-}
-
-.typing-text {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid white;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-/* Navigation Bar */
-nav {
-    background-color: #1a1a1a;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #64b5f6;
-}
-
-/* Main Content */
-.main-content {
-    padding-top: 5rem;
-    min-height: 100vh;
+body {
+    font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-}
-
-.welcome-section {
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.welcome-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
     color: #333;
 }
 
-.welcome-section p {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+/* Landing Screen */
+.typing-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    font-size: 2.5em;
+    overflow: hidden;
 }
 
-/* Animations */
+.typing-screen h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white }
+    50% { border-color: transparent; }
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .typing-text {
-        font-size: 1.8rem;
-    }
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 10px 0;
+}
 
-    nav ul {
-        gap: 1rem;
-    }
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
 
-    .welcome-section h1 {
-        font-size: 2rem;
-    }
+.navbar ul li {
+    margin: 0 15px;
+}
 
-    .welcome-section p {
-        font-size: 1rem;
-    }
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#home { background-color: #f0f8ff; }
+#about { background-color: #e6e6fa; }
+#projects { background-color: #fffacd; }
+#contact { background-color: #ffebcd; }
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Projects Section */
+.project-gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.project-item {
+    width: 150px;
+    height: 150px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#back-to-top {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
 }
