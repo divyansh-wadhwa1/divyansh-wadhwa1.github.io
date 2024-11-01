@@ -1,9 +1,6 @@
 // Typing effect for landing screen
 window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.getElementById("typing-screen").style.display = "none";
-        document.querySelector(".navbar").style.display = "flex";
-    }, 4000); // Adjust timing if needed
+    document.querySelector(".navbar").style.display = "flex";
 });
 
 // Smooth scrolling for navigation links
