@@ -6,45 +6,23 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif; /* Apply Times New Roman to the whole site */
     background-color: #000; /* Black background */
     color: #e0e0e0; /* Light text color */
     overflow-x: hidden;
 }
 
-/* Navigation Bar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px 0;
-    z-index: 1;
-}
-
-.navbar ul {
-    list-style: none;
+/* Full-Screen Typing Effect Section */
+.full-screen {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
 }
 
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.navbar ul li a:hover {
-    color: #ff6b6b;
-}
-
-/* Home Section Typing Effect */
 #typing-text {
-    font-size: 2.5em;
+    font-size: 3.5em; /* Large font size for welcome text */
     color: #e0e0e0; /* Ensures text color is visible */
     white-space: nowrap;
     overflow: hidden;
@@ -62,7 +40,38 @@ body {
     50% { border-color: transparent; }
 }
 
-/* Section Styles */
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly larger font for navbar links */
+}
+
+.navbar ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* General Section Styles */
 .section {
     padding: 80px 20px;
     min-height: 100vh;
@@ -71,13 +80,20 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: #000; /* Black background for all sections */
+    background-color: #000;
 }
 
-.intro p {
-    font-size: 1.2em;
+.section h2 {
+    font-size: 2.5em; /* Large font size for section headings */
+    margin-bottom: 20px;
+    color: #ff6b6b; /* Accent color for headings */
+}
+
+.section p {
+    font-size: 1.2em; /* Increased font size for paragraph text */
     color: #ccc;
-    margin-top: 10px;
+    max-width: 800px; /* Limit width for better readability */
+    line-height: 1.6; /* Line spacing for readability */
 }
 
 /* Contact Links */
@@ -98,4 +114,5 @@ footer {
     color: #e0e0e0;
     padding: 20px;
     text-align: center;
+    font-size: 1em;
 }
