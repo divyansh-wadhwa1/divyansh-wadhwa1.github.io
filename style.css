@@ -22,7 +22,7 @@ body {
 }
 
 #typing-text {
-    font-size: 3.5em; /* Large font size for welcome text */
+    font-size: 4em; /* Increased font size for welcome text */
     color: #e0e0e0; /* Ensures text color is visible */
     white-space: nowrap;
     overflow: hidden;
@@ -64,14 +64,14 @@ body {
 .navbar ul li a {
     color: #e0e0e0;
     text-decoration: none;
-    font-size: 1.2em; /* Slightly larger font for navbar links */
+    font-size: 1.5em; /* Larger font for navbar links */
 }
 
 .navbar ul li a:hover {
     color: #ff6b6b;
 }
 
-/* General Section Styles */
+/* Section Styles */
 .section {
     padding: 80px 20px;
     min-height: 100vh;
@@ -85,12 +85,12 @@ body {
 
 .section h2 {
     font-size: 2.5em; /* Large font size for section headings */
-    margin-bottom: 20px;
     color: #ff6b6b; /* Accent color for headings */
+    margin-bottom: 20px;
 }
 
 .section p {
-    font-size: 1.2em; /* Increased font size for paragraph text */
+    font-size: 1.5em; /* Increased font size for paragraph text */
     color: #ccc;
     max-width: 800px; /* Limit width for better readability */
     line-height: 1.6; /* Line spacing for readability */
@@ -100,7 +100,7 @@ body {
 .contact-links a {
     color: #ff6b6b;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Larger font for contact links */
     margin: 0 10px;
 }
 
@@ -114,5 +114,5 @@ footer {
     color: #e0e0e0;
     padding: 20px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
 }
