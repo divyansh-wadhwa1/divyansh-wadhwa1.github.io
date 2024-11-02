@@ -1,4 +1,66 @@
-/* General Section Styles */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #e0e0e0; /* Light text color */
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Home Section Typing Effect */
+#typing-text {
+    font-size: 2.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #ff6b6b;
+    animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+/* Section Styles */
 .section {
     padding: 80px 20px;
     min-height: 100vh;
@@ -7,14 +69,12 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: #000; /* Black background for all sections */
+    background-color: #000;
 }
 
-/* Heading Styles */
-.section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #ff6b6b; /* Accent color for section headings */
+.intro p {
+    font-size: 1.2em;
+    color: #ccc;
 }
 
 /* Contact Links */
@@ -26,5 +86,13 @@
 }
 
 .contact-links a:hover {
-    color: #e55a5a; /* Darker shade on hover */
+    color: #e55a5a;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
 }
